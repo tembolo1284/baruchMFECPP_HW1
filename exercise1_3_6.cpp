@@ -15,9 +15,9 @@ int main() {
 	printf("Please enter a number so we can shift it: ");
 	int b = scanf_s("%i", &i);
 
-	b = i >> 2; //equivalent to i/2^2
+	b = i >> 2; //equivalent to i/2^2. Also of note is we are doing int division.
 
-	printf("After shifting your number two places to the right we now have %i.", b);
+	printf("After shifting your number %i two places to the right we now have %i.", i, b);
 
 	return 0;
 

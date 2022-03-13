@@ -18,7 +18,7 @@ int main()
 	printf("x=%d\n", x);
 	x *= y = z = 4;  // x = 10 * 4 = 40
 	printf("x=%d\n", x);
-	x = y == z;   // x = true or 1
+	x = y == z;   // x = 1 for true
 	printf("x=%d\n", x);
 	return 0;
 }
