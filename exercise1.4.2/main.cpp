@@ -1,21 +1,39 @@
-/*Predict what the following program prints on screen(provide a code file with comments
-	stating the output for each line).*/
-
+/*Rewrite the C-program that was written for exercise 1, but use do while instead of while.*/
 
 #include <stdio.h>	
 #include <iostream>
-#include <string>
-
-
-	/* Conditional expressions */
+#include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-	int x = 1;
-	int y = 1;
-	x += y += x; //x = x + y = y + x = 3.....y = 2
-	printf("%d\n", (x < y) ? y : x); // Number 1....condition is false so it will print out x = 3
-	printf("%d\n", (x < y) ? x++ : y++); // Number 2....condition is false so it will print y = 2 then increment
-	printf("%d\n", x); // Number 3....it will print x = 3
-	printf("%d\n", y); // Number 4....it will print new value of y = 3
-	return 0;
+    int str[150];
+    int i = 0, ch = 0, w = 0, nl = 0, countspace = 0;;
+    printf("Enter any text and exit at any time with ctrl + D.\n");
+
+    do {
+        str[i] = getchar();
+        if (str[i] == EOF) {
+            break;
+        }
+        if (str[i] == ' ') {
+            countspace++;
+            i++;
+            continue;
+        }
+        if (countspace > 1) {
+        }   //do nothing we don't add a new word for consec spaces
+        else {
+            w += 1; //increment word count
+        }
+        if (str[i] == '\t' || str[i] == '\n') {
+            nl += 1; //increment new line
+        }
+        i++;
+        ch++; //increment char count
+    } 
+    while (str[i] != 26);
+
+    printf("\nYou typed %i chars, %i words, and %i new lines.\n", ch, w, nl);
+    return 0;
 }
+

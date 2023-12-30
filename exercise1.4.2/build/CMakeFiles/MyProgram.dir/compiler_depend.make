@@ -180,8 +180,11 @@ CMakeFiles/MyProgram.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/stdlib.h
 
+
+/usr/include/c++/11/stdlib.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 

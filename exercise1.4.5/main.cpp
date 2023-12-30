@@ -1,21 +1,22 @@
-/*Predict what the following program prints on screen(provide a code file with comments
-	stating the output for each line).*/
-
-
+/*Create a C-program that prints two columns on the screen with the temperature in 
+degrees Celsius in the left column and degrees Fahrenheit in the right column.
+Start with 0 degrees Celsius and proceed until 19 degrees Celsius. Take steps of 1 degree. 
+Print degrees Fahrenheit with 1 position after the comma. Also print a header text.
+The result must be obtained using a for construction*/
 #include <stdio.h>	
 #include <iostream>
 #include <string>
 
-
-	/* Conditional expressions */
-
 int main() {
-	int x = 1;
-	int y = 1;
-	x += y += x; //x = x + y = y + x = 3.....y = 2
-	printf("%d\n", (x < y) ? y : x); // Number 1....condition is false so it will print out x = 3
-	printf("%d\n", (x < y) ? x++ : y++); // Number 2....condition is false so it will print y = 2 then increment
-	printf("%d\n", x); // Number 3....it will print x = 3
-	printf("%d\n", y); // Number 4....it will print new value of y = 3
+	float tempF = 0;
+	float tempC = 0.0;
+	printf("Please find Celsius and equivalent Farenheit temperatures below.\n");
+
+	for (tempC = 0; tempC <= 19; tempC++) {
+
+		tempF = ((9.0 / 5.0) * tempC) + 32.0;
+		//cout << tempC << endl;
+		printf("\nCelsius Temp: %.1f     Farenheit Temp: %.1f", tempC, tempF);
+	}
 	return 0;
 }
